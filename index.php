@@ -38,6 +38,7 @@
                 $(this).toggleClass('active');
             });
         });
+
     </script>
 
 </head>
@@ -97,12 +98,12 @@
             <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
 
                 <div class="form-group">
-                    <label>Nama CC</label>
+                    <label style="color: green; font-weight: bold;">Nama CC ✔ </label>
                     <input type="text" class="form-control" placeholder="Masukkan Nama CC" name="" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Nama Mitra</label>
+                    <label style="color: red; font-weight: bold;">Nama Mitra ✖</label>
                     <input type="text" class="form-control" placeholder="Masukkan Nama Mitra" name="" required>
                 </div>
 
