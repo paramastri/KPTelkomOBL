@@ -98,12 +98,12 @@
             <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
 
                 <div class="form-group">
-                    <label style="color: green; font-weight: bold;">Nama CC ✔ </label>
+                    <label >Nama CC</label>
                     <input type="text" class="form-control" placeholder="Masukkan Nama CC" name="" required>
                 </div>
 
                 <div class="form-group">
-                    <label style="color: red; font-weight: bold;">Nama Mitra ✖</label>
+                    <label s>Nama Mitra</label>
                     <input type="text" class="form-control" placeholder="Masukkan Nama Mitra" name="" required>
                 </div>
 
@@ -120,7 +120,7 @@
 
                
 
-                <button value = "" style="margin-top: 40px; margin-bottom: 30px;" type="submit" class="btn btn-primary">Selesai</button>
+                <a href="berkas.php" value="" style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</a>
             </form>
             </div>
 

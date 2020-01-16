@@ -84,7 +84,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Form Status Dokumen OBL</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Berkas Dokumen OBL</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -95,10 +95,35 @@
             </nav>
 
 
+<div style="font-family:'GothamRounded-Medium'; margin-bottom: 30px;"  class="table-responsive-sm">
+    <table style="width: 20%; font-size: 13pt;">
+
+  <tbody>
+    <tr>
+      <td>Nama CC</td>
+      <td>: Mark</td>
+    </tr>
+    <tr>
+      <td>Nama Mitra</td>
+      <td>: Jacob</td>
+    </tr>
+    <tr>
+      <td>Nama Pekerjaan</td>
+      <td>: Jacob</td>
+    </tr>
+    <tr>
+      <td>PIC Mitra</td>
+      <td>: Jacob</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
                 <div class="row" style="font-family:'GothamRounded-Medium';">
                   <div class="col-6 col-md-4">
 
-                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88; ">
+                    <div class="card" style="width: 25rem; float: left; background-color: #69fa88; ">
                           <div class="card-body">
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -125,7 +150,7 @@
                   <div class="col-6 col-md-4">
 
 
-                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -148,7 +173,7 @@
 
 
                   <div class="col-6 col-md-4">
-                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -174,10 +199,10 @@
             <!-- BARIS KEDUA -->
 
 
-                <div class="row" style="font-family:'GothamRounded-Medium'; margin-top: 30px;">
+                <div class="row" style="font-family:'GothamRounded-Medium'; margin-top: 30px; margin-bottom: 30px;">
                   <div class="col-6 col-md-4">
 
-                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
                           <div class="card-body">
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -203,7 +228,7 @@
                   <div class="col-6 col-md-4">
 
 
-                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -226,7 +251,7 @@
 
 
                   <div class="col-6 col-md-4">
-                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
