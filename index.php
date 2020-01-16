@@ -112,92 +112,13 @@
                     <input type="text" class="form-control" placeholder="Masukkan Nama Pekerjaan" name="" required>
                 </div>
 
-                <div class="form-group">
-                    <label>Produk</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Produk" name="" required>
-                </div>
 
                 <div class="form-group">
                     <label>PIC Mitra</label>
                     <input type="text" class="form-control" placeholder="Masukkan PIC Mitra" name="" required>
                 </div>
 
-                <div>
-                    <label style="margin-top: 0px;">P6</label>
-                </div>
-
-                <input style="font-size: 10pt;" type="file" name="" required="">
-
-                <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 20px;" required>
-                  <option value="0"></option>
-                  <option value="1">OK</option>
-                  <option value="2">Belum OK</option>
-                </select> 
-
-                <!-- Keterangan If Belum OK  -->
-
-                <div class="form-group">
-                    <label style="margin-top: 20px;" for="exampleFormControlTextarea1">Keterangan</label>
-                    <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
-                </div>
-
-
-                <div>
-                    <label style="margin-top: 15px;">P8</label>
-                </div>
-
-                <input style="font-size: 10pt;" type="file" name="" required="">
-
-                <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 20px;" required>
-                  <option value="0"></option>
-                  <option value="1">OK</option>
-                  <option value="2">Belum OK</option>
-                </select> 
-
-                <!-- Keterangan If Belum OK  -->
-
-                <div class="form-group">
-                    <label style="margin-top: 20px;" for="exampleFormControlTextarea1">Keterangan</label>
-                    <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
-                </div>
-
-                <div>
-                    <label style="margin-top: 15px;">KL</label>
-                </div>
-
-                <input style="font-size: 10pt;" type="file" name="" required="">
-
-                <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 20px;" required>
-                  <option value="0"></option>
-                  <option value="1">OK</option>
-                  <option value="2">Belum OK</option>
-                </select> 
-
-                <!-- Keterangan If Belum OK  -->
-
-                <div class="form-group">
-                    <label style="margin-top: 20px;" for="exampleFormControlTextarea1">Keterangan</label>
-                    <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
-                </div>
-
-                <div>
-                    <label style="margin-top: 15px;">BAST Mitra</label>
-                </div>
-
-                <input style="font-size: 10pt;" type="file" name="" required="">
-
-                <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 20px;" required>
-                  <option value="0"></option>
-                  <option value="1">OK</option>
-                  <option value="2">Belum OK</option>
-                </select> 
-
-                <!-- Keterangan If Belum OK  -->
-
-                <div class="form-group">
-                    <label style="margin-top: 20px;" for="exampleFormControlTextarea1">Keterangan</label>
-                    <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
-                </div>
+               
 
                 <button value = "" style="margin-top: 40px; margin-bottom: 30px;" type="submit" class="btn btn-primary">Selesai</button>
             </form>
