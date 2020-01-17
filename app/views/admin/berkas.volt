@@ -157,14 +157,14 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
-                    <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                    <select name="status_p1" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                       <option value="0"></option>
                       <option value="1">OK</option>
                       <option value="2">Belum OK</option>
                     </select>  
                     <div class="form-group">
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                        <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea name = "keterangan_p1" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>              
                     <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                   </div>
@@ -180,14 +180,14 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
-                    <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                    <select name="status_p6" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                       <option value="0"></option>
                       <option value="1">OK</option>
                       <option value="2">Belum OK</option>
                     </select>  
                     <div class="form-group">
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                        <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea name= "keterangan_p6" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>              
                     <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                   </div>
@@ -209,14 +209,14 @@
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
                             <h6 class="card-subtitle mb-2 ">Status</h6>
-                            <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                            <select name="status_p8" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                               <option value="0"></option>
                               <option value="1">OK</option>
                               <option value="2">Belum OK</option>
                             </select>  
                             <div class="form-group">
                                 <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                                <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                <textarea name="status_p8" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                             </div>              
                             <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                           </div>
@@ -235,14 +235,14 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
-                    <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                    <select name="status_kl" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                       <option value="0"></option>
                       <option value="1">OK</option>
                       <option value="2">Belum OK</option>
                     </select>  
                     <div class="form-group">
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                        <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea name="status_kl" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>              
                     <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                   </div>
@@ -258,14 +258,14 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
-                    <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                    <select name="status_bast" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                       <option value="0"></option>
                       <option value="1">OK</option>
                       <option value="2">Belum OK</option>
                     </select>  
                     <div class="form-group">
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                        <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea name = "keterangan_bast" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>              
                     <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                   </div>
