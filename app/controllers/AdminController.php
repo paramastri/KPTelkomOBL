@@ -58,20 +58,23 @@ class AdminController extends Controller
 
     }
 
-    public function storeuploadAction()
+    public function berkasp0Action()
     {
         $berkas = new file();
         $id_obl = $this->request->getPost('id_obl');
         $status_p0 = $this->request->getPost('status_p0');
         $keterangan_p0 = $this->request->getPost('keterangan_p0');
+        // echo $keterangan_p0;
+        // die();
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
         if (count($messages2)) {
             $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
-            return $this->response->redirect('admin/berkas' . '/' . $id);
+            return $this->response->redirect('admin/berkas' . '/' . $id_obl);
+
         }
         else
-        {         
+        {   
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
@@ -95,10 +98,9 @@ class AdminController extends Controller
             $berkas->file_p0 = $berkas->nama_cc.'-p1'.end($temp);
             $berkas->status_p0 = $status_p0;
             $berkas->keterangan_p0 = $keterangan_p0;
-    
-            $berkas->save();
+            echo $berkas->keterangan_p0;
 
-            $this->response->redirect('surat/list');
+            $this->response->redirect('admin/berkas'.'/'.$id_obl);
         }
         
     }

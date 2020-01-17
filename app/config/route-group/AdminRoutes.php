@@ -31,10 +31,18 @@ class AdminRoutes extends RouterGroup
         
 
         $this->addGet(
-            '/berkas',
+            '/berkas/{id}',
             [
                 'controller' => 'admin',
                 'action' => 'berkas'
+            ]
+        );
+
+        $this->addPost(
+            '/berkasp0',
+            [
+                'controller' => 'admin',
+                'action' => 'berkasp0'
             ]
         );
 
@@ -46,13 +54,8 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
-        $this->addGet(
-            '/storedata',
-            [
-                'controller' => 'admin',
-                'action' => 'storedata'
-            ]
-        );
+
+
 
         
     }
