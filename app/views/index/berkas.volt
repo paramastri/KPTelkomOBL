@@ -123,7 +123,7 @@
                 <div class="row" style="font-family:'GothamRounded-Medium';">
                   <div class="col-6 col-md-4">
 
-                    <div class="card" style="width: 25rem; float: left; background-color: #69fa88; ">
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88; ">
                           <div class="card-body">
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -150,7 +150,7 @@
                   <div class="col-6 col-md-4">
 
 
-                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -173,7 +173,7 @@
 
 
                   <div class="col-6 col-md-4">
-                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -202,7 +202,7 @@
                 <div class="row" style="font-family:'GothamRounded-Medium'; margin-top: 30px; margin-bottom: 30px;">
                   <div class="col-6 col-md-4">
 
-                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                           <div class="card-body">
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -228,7 +228,7 @@
                   <div class="col-6 col-md-4">
 
 
-                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
@@ -251,7 +251,7 @@
 
 
                   <div class="col-6 col-md-4">
-                    <div class="card" style="width: 25rem; float: left; background-color: #e69573;">
+                    <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
