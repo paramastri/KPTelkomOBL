@@ -23,6 +23,14 @@ $di->set(
             ]
         );
 
+        $router->addPost(
+            '/storedata',
+            [
+                'controller' => 'index',
+                'action' => 'storedata'
+            ]
+        );
+
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'

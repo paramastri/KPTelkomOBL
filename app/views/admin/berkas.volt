@@ -127,16 +127,17 @@
                           <div class="card-body">
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="" required="">    
+                            <input type="hidden" name="id_obl" value="{{data}}">
+                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file_p0" required="">    
                             <h6 class="card-subtitle mb-2 ">Status</h6>
-                            <select name="" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
+                            <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" required>
                               <option value="0"></option>
                               <option value="1">OK</option>
                               <option value="2">Belum OK</option>
                             </select>  
                             <div class="form-group">
                                 <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                                <textarea class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                <textarea name = "keterangan_p0" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" required></textarea>
                             </div>              
                             <a value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</a>
                           <!--   <h1 style="color: green; font-weight: bold; text-align: center; font-size: 100pt;">✔ </h1> -->

@@ -13,8 +13,10 @@ class UserController extends Controller{
 	    $user->username = $this->request->getPost('username');
 	    $password = $this->request->getPost('password');
 	    $user->password = $this->security->hash($password);
-	    $user->status = 0;
 	    $usernames = user::findFirst("username = '$user->username'");
+	    // echo $user->username;
+	    // echo $user->password;
+	    // die();
 	    if($usernames){
 	        $this->flashSession->error("Gagal register. Username telah digunakan.");
 
@@ -81,7 +83,7 @@ class UserController extends Controller{
 	        // );
 	        $user = user::findFirst("username = '$username'");
 	        if ($user){
-	        	if($user->status == 1 ){
+	        	// if($user->status == 1 ){
 		            if($this->security->checkHash($pass, $user->password)){
 		                $this->session->set(
 		                    'user',
@@ -99,19 +101,19 @@ class UserController extends Controller{
 		                $this->response->redirect('user/login');
 		            }
 		        }
-		        else {
-		        	// echo"belum verifikasi";
-		        	// die();
-		        	$this->flashSession->error("Gagal masuk sebagai user. Belum diverifikasi, silakan hubungi admin.");
+		        // else {
+		        // 	// echo"belum verifikasi";
+		        // 	// die();
+		        // 	$this->flashSession->error("Gagal masuk sebagai user. Belum diverifikasi, silakan hubungi admin.");
 		            
-		            $this->response->redirect('user/login');
-		        }
+		        //     $this->response->redirect('user/login');
+		        // }
 	    	}
 	        else{
 	            $this->flashSession->error("Gagal masuk sebagai user. Silakan cek kembali username dan password anda.");
 	            $this->response->redirect('user/login');
 	        }
-        }
+        // }
 
     }
 

@@ -3,6 +3,7 @@ use Phalcon\Mvc\Model;
 class file extends Model
 {
     public $id;
+    public $id_obl;
     public $file_p0;
     public $status_p0;
     public $keterangan_p0;

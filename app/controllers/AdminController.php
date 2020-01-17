@@ -48,14 +48,59 @@ class AdminController extends Controller
     }
 
 
-    public function berkasAction()
+    public function berkasAction($id)
     {
+        $this->view->data = $id;
     }
 
     public function dataAction()
     {
+
     }
 
-   
+    public function storeuploadAction()
+    {
+        $berkas = new file();
+        $id_obl = $this->request->getPost('id_obl');
+        $status_p0 = $this->request->getPost('status_p0');
+        $keterangan_p0 = $this->request->getPost('keterangan_p0');
+        $val2 = new FileValidation();
+        $messages2 = $val2->validate($_FILES);
+        if (count($messages2)) {
+            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            return $this->response->redirect('admin/berkas' . '/' . $id);
+        }
+        else
+        {         
+            $obl = obl::findFirst("id='$id_obl'");
+            // $penomoran = (explode('/',$surat->no_surat,4));
+            // $nomorsaja = (explode('.',$penomoran[0],2));
+            if (true == $this->request->hasFiles() && $this->request->isPost()) {
+                $upload_dir = __DIR__ . '/../../public/uploads/';
+          
+                if (!is_dir($upload_dir)) {
+                  mkdir($upload_dir, 0755);
+                }
+                foreach ($this->request->getUploadedFiles() as $file_p0) {
+                    $temp = explode(".", $_FILES["file"]["name"]);
+                    $file_p0->moveTo($upload_dir . $file->getName());
+                    $lama = $upload_dir.$file_p0->getName();
+                    $baru = $upload_dir.$obl->nama_cc.'-p1'.end($temp);
+                    rename($lama, $baru); 
+                }
+            }
+
+            // $berkas->nama_pengupload = $this->session->get('user')['username'];
+            $berkas->id_obl = $id_obl;
+            $berkas->file_p0 = $berkas->nama_cc.'-p1'.end($temp);
+            $berkas->status_p0 = $status_p0;
+            $berkas->keterangan_p0 = $keterangan_p0;
+    
+            $berkas->save();
+
+            $this->response->redirect('surat/list');
+        }
+        
+    }
 
 }

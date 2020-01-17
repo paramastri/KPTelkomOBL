@@ -5,5 +5,4 @@ class user extends Model
     public $id;
     public $username;
     public $password;
-    public $status;
 }

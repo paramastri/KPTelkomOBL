@@ -46,6 +46,14 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/storedata',
+            [
+                'controller' => 'admin',
+                'action' => 'storedata'
+            ]
+        );
+
         
     }
 }

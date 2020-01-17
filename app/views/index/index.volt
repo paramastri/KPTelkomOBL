@@ -95,32 +95,32 @@
             </nav>
 
             <div>
-            <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="{{ url("storedata") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
 
                 <div class="form-group">
                     <label >Nama CC</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nama CC" name="" required>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama CC" name="nama_cc" required>
                 </div>
 
                 <div class="form-group">
                     <label s>Nama Mitra</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nama Mitra" name="" required>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Mitra" name="nama_mitra" required>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Pekerjaan</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nama Pekerjaan" name="" required>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Pekerjaan" name="nama_pekerjaan" required>
                 </div>
 
 
                 <div class="form-group">
                     <label>PIC Mitra</label>
-                    <input type="text" class="form-control" placeholder="Masukkan PIC Mitra" name="" required>
+                    <input type="text" class="form-control" placeholder="Masukkan PIC Mitra" name="pic_mitra" required>
                 </div>
 
                
-
-                <a href="berkas.php" value="" style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</a>
+                <button style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</button>
+<!--                 <a style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</a> -->
             </form>
             </div>
 
