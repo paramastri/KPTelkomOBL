@@ -12,6 +12,6 @@ return new Config([
         'dbname' => ''
     ],
     'url' => [
-        'baseUrl' => 'http://localhost/telkomobl/'
+        'baseUrl' => 'http://localhost/kptelkomobl/'
     ]
 ]);

@@ -5,13 +5,15 @@ $di->set(
     function () {
         $router = new \Phalcon\Mvc\Router(false);
 
-        // $router->mount(
-        //     new AdminRoutes()
-        // );
+        $router->mount(
+            new AdminRoutes()
+        );
 
-        // $router->mount(
-        //     new SuratRoutes()
-        // );
+
+
+        $router->mount(
+            new UserRoutes()
+        );
 
         $router->addGet(
             '/',
@@ -21,37 +23,11 @@ $di->set(
             ]
         );
 
-        $router->addGet(
-            '/berkas',
-            [
-                'controller' => 'index',
-                'action' => 'berkas'
-            ]
-        );
-
-        $router->addGet(
-            '/data',
-            [
-                'controller' => 'index',
-                'action' => 'data'
-            ]
-        );
-
-        $router->addGet(
-            '/login',
-            [
-                'controller' => 'index',
-                'action' => 'login'
-            ]
-        );
-
-        $router->addGet(
-            '/register',
-            [
-                'controller' => 'index',
-                'action' => 'register'
-            ]
-        );
-       return $router;
+        $router->notFound([
+            'controller' => 'index',
+            'action' => 'show404'
+        ]);
+        
+        return $router;
     }
 );
