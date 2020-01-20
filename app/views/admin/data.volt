@@ -143,6 +143,12 @@
                 {title: "Nama Mitra", field: "nama_mitra"},
                 {title: "Nama Pekerjaan", field: "nama_pekerjaan"},
                 {title: "PIC Mitra", field: "pic_mitra"},
+                {title: "P0", field: "p0"},
+                {title: "P1", field: "p1"},
+                {title: "P6", field: "p6"},
+                {title: "P8", field: "p8"},
+                {title: "KL", field: "kl"},
+                {title: "BAST", field: "bast"},
                 {
                     title: "Edit", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
@@ -154,7 +160,7 @@
                 
             ],
         });
-        table.setData("{{ url('/list') }}");
+        table.setData("{{ url('admin/list') }}");
     </script>
         </div>
 

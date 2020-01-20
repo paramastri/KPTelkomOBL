@@ -104,7 +104,7 @@ class AdminRoutes extends RouterGroup
 
 
         $this->addGet(
-            '/listview',
+            '/listview/{id}',
             [
                 'controller' => 'admin',
                 'action' => 'listview'

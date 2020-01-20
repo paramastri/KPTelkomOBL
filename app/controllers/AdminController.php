@@ -430,11 +430,71 @@ class AdminController extends Controller
         foreach ($listdatas as $listdata)
         {
 
+            if($listdata->p0 == 1)
+            {
+                $status_p0 = "OK";
+            }
+            elseif ($listdata->p0 == 2)
+            {
+                $status_p0 = "BELUM OK";
+            }
+
+            if ($listdata->p1 == 1) 
+            {
+                $status_p1 = "OK";
+            }
+            elseif ($listdata->p1 == 2) 
+            {
+                $status_p1 = "BELUM OK";
+            }
+
+            if ($listdata->p6 == 1) 
+            {
+                $status_p6 = "OK";
+            }
+            elseif ($listdata->p6 == 2) 
+            {
+                $status_p6 = "BELUM OK";
+            }
+
+            if ($listdata->p8 == 1) 
+            {
+                $status_p8 = "OK";
+            }
+            elseif ($listdata->p8 == 2) 
+            {
+                $status_p8 = "BELUM OK";
+            }
+
+            if ($listdata->kl == 1) 
+            {
+                $status_kl = "OK";
+            }
+            elseif ($listdata->kl == 2) 
+            {
+                $status_kl = "BELUM OK";
+            }
+            
+            if ($listdata->bast == 1) 
+            {
+                $status_bast = "OK";
+            }
+            elseif ($listdata->bast == 2) 
+            {
+                $status_bast = "BELUM OK";
+            }
+
             $data[] = array(
                 'nama_cc' => $listdata->nama_cc,
                 'nama_mitra' => $listdata->nama_mitra,
                 'nama_pekerjaan' => $listdata->nama_pekerjaan,
                 'pic_mitra' => $listdata->pic_mitra,
+                'p0' => $status_p0,
+                'p1' => $status_p1,
+                'p6' => $status_p6,
+                'p8' => $status_p8,
+                'kl' => $status_kl,
+                'bast' => $status_bast,
                 'link' => $listdata->id,
             );
         }
@@ -444,8 +504,8 @@ class AdminController extends Controller
 
     }
 
-    public function listviewAction()
+    public function listviewAction($id)
     {
-
+        $this->view->data = $array;
     }
 }
