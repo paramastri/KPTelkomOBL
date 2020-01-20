@@ -420,4 +420,32 @@ class AdminController extends Controller
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
+
+
+    public function listAction()
+    {
+        $listdatas = obl::find();
+        $data = array();
+
+        foreach ($listdatas as $listdata)
+        {
+
+            $data[] = array(
+                'nama_cc' => $listdata->nama_cc,
+                'nama_mitra' => $listdata->nama_mitra,
+                'nama_pekerjaan' => $listdata->nama_pekerjaan,
+                'pic_mitra' => $listdata->pic_mitra,
+                'link' => $listdata->id,
+            );
+        }
+
+        $content = json_encode($data);
+        return $this->response->setContent($content);
+
+    }
+
+    public function listviewAction()
+    {
+
+    }
 }

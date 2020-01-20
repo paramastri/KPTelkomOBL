@@ -94,6 +94,23 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/list',
+            [
+                'controller' => 'admin',
+                'action' => 'list'
+            ]
+        );
+
+
+        $this->addGet(
+            '/listview',
+            [
+                'controller' => 'admin',
+                'action' => 'listview'
+            ]
+        );
+
 
 
 

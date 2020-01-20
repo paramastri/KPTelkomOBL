@@ -140,14 +140,9 @@
             columns: [
                 {title: "No", field: "no", formatter: "rownum", width: 10},
                 {title: "Nama CC", field: "nama_cc"},
+                {title: "Nama Mitra", field: "nama_mitra"},
                 {title: "Nama Pekerjaan", field: "nama_pekerjaan"},
                 {title: "PIC Mitra", field: "pic_mitra"},
-                {title: "P0", field: "P0"},
-                {title: "P1", field: "P1"},
-                {title: "P6", field: "P6"},
-                {title: "P8", field: "P8"},
-                {title: "KL", field: "KL"},
-                {title: "BAST Mitra", field: "BAST Mitra"},
                 {
                     title: "Edit", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
@@ -159,7 +154,7 @@
                 
             ],
         });
-        table.setData("{{ url('/listdata') }}");
+        table.setData("{{ url('/list') }}");
     </script>
         </div>
 
