@@ -119,22 +119,24 @@
 </table>
 </div>
 
-<form action="{{ url("admin/berkasp0") }}" method="post">
+
                 <div class="row" style="font-family:'GothamRounded-Medium';">
                   <div class="col-6 col-md-4">
 
                     <div class="card" style="width: 20rem; float: left; background-color: #69fa88; ">
                           <div class="card-body">
+                            <form action="{{ url("admin/berkasp0") }}" method="post" enctype="multipart/form-data">
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input type="hidden" name="id_obl" value="{{data}}">
-                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file_p0">    
+                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
                             <h6 class="card-subtitle mb-2 ">Status</h6>
                             <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                               <option value="0"></option>
                               <option value="1">OK</option>
                               <option value="2">Belum OK</option>
                             </select>  
+                            <input type="hidden" name="1" value="1">
                             <div class="form-group">
                                 <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
                                 <textarea name = "keterangan_p0" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
@@ -142,6 +144,7 @@
                             <button  style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
                           <!--   <h1 style="color: green; font-weight: bold; text-align: center; font-size: 100pt;">✔ </h1> -->
                           </div>
+                        </form>
                     </div>
 
                   </div>
@@ -153,9 +156,11 @@
 
                     <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
+                    <form action="{{ url("admin/berkasp1") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="">    
+                    <input type="hidden" name="id_obl" value="{{data}}">
+                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
                     <select name="status_p1" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                       <option value="0"></option>
@@ -166,8 +171,10 @@
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
                         <textarea name = "keterangan_p1" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
                     </div>              
-                    <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
+                    <button style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
                   </div>
+                
                 </div>  
 
                   </div>
@@ -176,9 +183,11 @@
                   <div class="col-6 col-md-4">
                     <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
+                    <form action="{{ url("admin/berkasp6") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="">    
+                    <input type="hidden" name="id_obl" value="{{data}}">
+                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
                     <h6 class="card-subtitle mb-2 ">Status</h6>
                     <select name="status_p6" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                       <option value="0"></option>
@@ -191,6 +200,7 @@
                     </div>              
                     <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
                   </div>
+                </form>
                 </div>  
                   </div>
                 </div>
@@ -205,9 +215,11 @@
 
                     <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                           <div class="card-body">
+                            <form action="{{ url("admin/berkasp8") }}" method="post" enctype="multipart/form-data">
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="">    
+                            <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">
+                            <input type="hidden" name="id_obl" value="{{data}}">    
                             <h6 class="card-subtitle mb-2 ">Status</h6>
                             <select name="status_p8" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                               <option value="0"></option>
@@ -216,9 +228,10 @@
                             </select>  
                             <div class="form-group">
                                 <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                                <textarea name="status_p8" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
+                                <textarea name="keterangan_p8" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
                             </div>              
                             <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
+                          </form>
                           </div>
                     </div>
 
@@ -231,9 +244,11 @@
 
                     <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
+                    <form action="{{ url("admin/berkaskl") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="">    
+                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">  
+                    <input type="hidden" name="id_obl" value="{{data}}">  
                     <h6 class="card-subtitle mb-2 ">Status</h6>
                     <select name="status_kl" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                       <option value="0"></option>
@@ -242,9 +257,10 @@
                     </select>  
                     <div class="form-group">
                         <label style="margin-top: 20px;" for="exampleFormControlTextarea1" >Keterangan</label>
-                        <textarea name="status_kl" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
+                        <textarea name="keterangan_kl" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
                     </div>              
                     <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
+                  </form>
                   </div>
                 </div>  
 
@@ -254,9 +270,11 @@
                   <div class="col-6 col-md-4">
                     <div class="card" style="width: 20rem; float: left; background-color: #e69573;">
                   <div class="card-body">
+                    <form action="{{ url("admin/berkasbast") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
-                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="">    
+                    <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
+                    <input type="hidden" name="id_obl" value="{{data}}">
                     <h6 class="card-subtitle mb-2 ">Status</h6>
                     <select name="status_bast" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
                       <option value="0"></option>
@@ -268,16 +286,11 @@
                         <textarea name = "keterangan_bast" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea>
                     </div>              
                     <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button>
+                  </form>
                   </div>
                 </div>  
                   </div>
                 </div>
-</form>
-
-
-
-    
-
 
 </body>
 

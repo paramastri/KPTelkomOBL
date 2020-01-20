@@ -46,6 +46,46 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addPost(
+            '/berkasp1',
+            [
+                'controller' => 'admin',
+                'action' => 'berkasp1'
+            ]
+        );
+
+        $this->addPost(
+            '/berkasp6',
+            [
+                'controller' => 'admin',
+                'action' => 'berkasp6'
+            ]
+        );
+
+        $this->addPost(
+            '/berkasp8',
+            [
+                'controller' => 'admin',
+                'action' => 'berkasp8'
+            ]
+        );
+
+        $this->addPost(
+            '/berkaskl',
+            [
+                'controller' => 'admin',
+                'action' => 'berkaskl'
+            ]
+        );
+
+        $this->addPost(
+            '/berkasbast',
+            [
+                'controller' => 'admin',
+                'action' => 'berkasbast'
+            ]
+        );
+
         $this->addGet(
             '/data',
             [

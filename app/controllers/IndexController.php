@@ -36,7 +36,12 @@ class IndexController extends Controller
         // echo $obl->nama_cc;
         // die();
         $obl->save();
-        $this->response->redirect('admin/berkas');
+        $max = obl::maximum(
+            [
+                'column' => 'id',
+            ]
+        );
+        $this->response->redirect('admin/berkas'.'/'.$max);
     }
 
     public function show404Action()
