@@ -50,7 +50,116 @@ class AdminController extends Controller
 
     public function berkasAction($id)
     {
-        $this->view->data = $id;
+        $data = obl::findFirst("id='$id'");
+        $this->view->data = $data;
+
+        $keterangan_p0 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '1',
+            ]
+        ]);
+        $this->view->keterangan_p0 = $keterangan_p0;
+
+        $keterangan_p1 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '2',
+            ]
+        ]);
+        $this->view->keterangan_p1 = $keterangan_p1;
+
+        $keterangan_p6 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '3',
+            ]
+        ]);
+        $this->view->keterangan_p6 = $keterangan_p6;
+
+        $keterangan_p8 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '4',
+            ]
+        ]);
+        $this->view->keterangan_p8 = $keterangan_p8;
+
+        $keterangan_kl = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        $this->view->keterangan_kl = $keterangan_kl;
+
+        $keterangan_bast = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '6',
+            ]
+        ]);
+        $this->view->keterangan_bast = $keterangan_bast;
+
+        $dokumen_p0 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '1',
+            ]
+        ]);
+        $this->view->dokumen_p0 = $dokumen_p0;
+
+        $dokumen_p1 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '2',
+            ]
+        ]);
+        $this->view->dokumen_p1 = $dokumen_p1;
+
+        $dokumen_p6 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '3',
+            ]
+        ]);
+        $this->view->dokumen_p6 = $dokumen_p6;
+
+        $dokumen_p8 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '4',
+            ]
+        ]);
+        $this->view->dokumen_p8 = $dokumen_p8;
+
+        $dokumen_kl = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        $this->view->dokumen_kl = $dokumen_kl;
+
+        $dokumen_bast = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '6',
+            ]
+        ]);
+        $this->view->dokumen_bast = $dokumen_bast;
     }
 
     public function dataAction()
@@ -106,7 +215,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -125,10 +234,28 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 1;
-            $berkas->file = $obl->nama_cc.'-p0.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '1',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-p0.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 1;
+                $berkas->file = $obl->nama_cc.'-p0.'.end($temp);
+                $berkas->save();
+            }
+            
             // $this->response->redirect('admin/berkas'.'/'.$id_obl);
         }
 
@@ -199,7 +326,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             //var_dump($obl); die();
 
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 // echo("punya file"); die();
@@ -219,10 +346,27 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 2;
-            $berkas->file = $obl->nama_cc.'-p1.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '2',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-p1.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 2;
+                $berkas->file = $obl->nama_cc.'-p1.'.end($temp);
+                $berkas->save();
+            }
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
@@ -283,7 +427,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -302,10 +446,27 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 3;
-            $berkas->file = $obl->nama_cc.'-p6.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '3',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-p6.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 3;
+                $berkas->file = $obl->nama_cc.'-p6.'.end($temp);
+                $berkas->save();
+            }
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
@@ -366,7 +527,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -385,10 +546,27 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 4;
-            $berkas->file = $obl->nama_cc.'-p8.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '4',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-p8.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 4;
+                $berkas->file = $obl->nama_cc.'-p8.'.end($temp);
+                $berkas->save();
+            }
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
@@ -450,7 +628,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -469,10 +647,27 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 5;
-            $berkas->file = $obl->nama_cc.'-kl.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '5',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-kl.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 5;
+                $berkas->file = $obl->nama_cc.'-kl.'.end($temp);
+                $berkas->save();
+            }
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
@@ -533,7 +728,7 @@ class AdminController extends Controller
             $obl = obl::findFirst("id='$id_obl'");
             // $penomoran = (explode('/',$surat->no_surat,4));
             // $nomorsaja = (explode('.',$penomoran[0],2));
-            $berkas = new file();
+            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -552,10 +747,27 @@ class AdminController extends Controller
                 }
             }
             // $berkas->nama_pengupload = $this->session->get('user')['username'];
-            $berkas->id_obl = $id_obl;
-            $berkas->id_tipe = 6;
-            $berkas->file = $obl->nama_cc.'-bast.'.end($temp);
-            $berkas->save();
+            $cekfile = file::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '6',
+                ]
+            ]);
+
+            if($cekfile)
+            {
+                $cekfile->file = $obl->nama_cc.'-bast.'.end($temp);
+                $cekfile->save();
+
+            }
+            else{
+                $berkas = new file();
+                $berkas->id_obl = $id_obl;
+                $berkas->id_tipe = 6;
+                $berkas->file = $obl->nama_cc.'-bast.'.end($temp);
+                $berkas->save();
+            }
         }
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
@@ -646,5 +858,30 @@ class AdminController extends Controller
     public function listviewAction($id)
     {
         $this->view->data = $array;
+    }
+
+    public function editAction($id)
+    {
+        $data = obl::findFirst("id='$id'");
+        $this->view->data = $data;
+    }
+
+    public function storeeditdataAction()
+    {
+        $id_obl = $this->request->getPost('id_obl');
+        $nama_cc = $this->request->getPost('nama_cc');
+        $nama_mitra = $this->request->getPost('nama_mitra');
+        $nama_pekerjaan = $this->request->getPost('nama_pekerjaan');
+        $pic_mitra = $this->request->getPost('pic_mitra');
+
+        $obl = obl::findFirst("id='$id_obl'");
+        $obl->nama_cc = $nama_cc;
+        $obl->nama_mitra = $nama_mitra;
+        $obl->nama_pekerjaan = $nama_pekerjaan;
+        $obl->pic_mitra = $pic_mitra;
+        // echo $obl->nama_cc;
+        // die();
+        $obl->save();
+        $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
 }

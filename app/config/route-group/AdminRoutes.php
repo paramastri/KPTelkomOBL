@@ -111,6 +111,22 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/edit/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'edit'
+            ]
+        );
+
+        $this->addPost(
+            '/storeeditdata',
+            [
+                'controller' => 'admin',
+                'action' => 'storeeditdata'
+            ]
+        );
+
 
 
 
