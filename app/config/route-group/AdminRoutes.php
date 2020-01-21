@@ -135,6 +135,60 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/downloadp0/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadp0'
+            ]
+        );
+
+
+        $this->addGet(
+            '/downloadp1/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadp1'
+            ]
+        );
+
+        $this->addGet(
+            '/downloadp6/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadp6'
+            ]
+        );
+
+
+        $this->addGet(
+            '/downloadp8/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadp8'
+            ]
+        );
+
+        $this->addGet(
+            '/downloadkl/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadkl'
+            ]
+        );
+
+        $this->addGet(
+            '/downloadbast/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'downloadbast'
+            ]
+        );
+
+
+
+
+
 
 
 

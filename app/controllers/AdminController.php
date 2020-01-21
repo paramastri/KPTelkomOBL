@@ -772,6 +772,246 @@ class AdminController extends Controller
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
 
+    public function downloadp0Action($id)
+    { 
+
+        $file_p0 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '1',
+            ]
+        ]);
+
+            if($file_p0->file)
+            {
+                $upload_dir = __DIR__ . '/../../public/uploads/';
+                $path = $upload_dir.$file_p0->file;
+                $filetype = filetype($path);
+                $filesize = filesize($path);
+                // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+                // header('Content-Description: File Download');
+                header('Content-type: '.$filetype);
+                header('Content-length: ' . $filesize);
+                header('Content-Transfer-Encoding: binary');
+                header('Accept-Ranges: bytes');
+                header('Content-Disposition: attachment; filename="'.$file_p0->file.'"');
+                readfile($path);
+
+            }
+            else
+            {
+                return $this->response->redirect('admin/detail'.'/'.$id);
+            }
+        }
+
+
+    public function downloadp1Action($id)
+    { 
+        // echo $id;
+        // die();
+        $file_p1 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '2',
+            ]
+        ]);
+        // echo $file_p1->file;
+        // die();
+
+        // var_dump($file_p1);
+        // die();
+        
+        if($file_p1->file)
+        {
+            // echo $file_p1;
+            // die();
+            $upload_dir = __DIR__ . '/../../public/uploads/';
+            $path = $upload_dir.$file_p1->file;
+            $filetype = filetype($path);
+            $filesize = filesize($path);
+            // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+            // header('Content-Description: File Download');
+            header('Content-type: '.$filetype);
+            header('Content-length: ' . $filesize);
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+            header('Content-Disposition: attachment; filename="'.$file_p1->file.'"');
+            readfile($path);
+
+        }
+        else
+        {
+            return $this->response->redirect('admin/detail'.'/'.$id);
+        }
+    }
+
+
+    public function downloadp6Action($id)
+    { 
+        // echo $id;
+        // die();
+        $file_p6 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '3',
+            ]
+        ]);
+        // echo $file_p1->file;
+        // die();
+
+        // var_dump($file_p1);
+        // die();
+        
+        if($file_p6->file)
+        {
+            // echo $file_p1;
+            // die();
+            $upload_dir = __DIR__ . '/../../public/uploads/';
+            $path = $upload_dir.$file_p6->file;
+            $filetype = filetype($path);
+            $filesize = filesize($path);
+            // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+            // header('Content-Description: File Download');
+            header('Content-type: '.$filetype);
+            header('Content-length: ' . $filesize);
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+            header('Content-Disposition: attachment; filename="'.$file_p6->file.'"');
+            readfile($path);
+
+        }
+        else
+        {
+            return $this->response->redirect('admin/detail'.'/'.$id);
+        }
+    }
+
+    public function downloadp8Action($id)
+    { 
+        // echo $id;
+        // die();
+        $file_p8 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '4',
+            ]
+        ]);
+        // echo $file_p1->file;
+        // die();
+
+        // var_dump($file_p1);
+        // die();
+        
+        if($file_p8->file)
+        {
+            // echo $file_p1;
+            // die();
+            $upload_dir = __DIR__ . '/../../public/uploads/';
+            $path = $upload_dir.$file_p8->file;
+            $filetype = filetype($path);
+            $filesize = filesize($path);
+            // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+            // header('Content-Description: File Download');
+            header('Content-type: '.$filetype);
+            header('Content-length: ' . $filesize);
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+            header('Content-Disposition: attachment; filename="'.$file_p8->file.'"');
+            readfile($path);
+
+        }
+        else
+        {
+            return $this->response->redirect('admin/detail'.'/'.$id);
+        }
+    }
+
+
+    public function downloadklAction($id)
+    { 
+        // echo $id;
+        // die();
+        $file_kl = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        // echo $file_p1->file;
+        // die();
+
+        // var_dump($file_p1);
+        // die();
+        
+        if($file_kl->file)
+        {
+            // echo $file_p1;
+            // die();
+            $upload_dir = __DIR__ . '/../../public/uploads/';
+            $path = $upload_dir.$file_kl->file;
+            $filetype = filetype($path);
+            $filesize = filesize($path);
+            // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+            // header('Content-Description: File Download');
+            header('Content-type: '.$filetype);
+            header('Content-length: ' . $filesize);
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+            header('Content-Disposition: attachment; filename="'.$file_kl->file.'"');
+            readfile($path);
+
+        }
+        else
+        {
+            return $this->response->redirect('admin/detail'.'/'.$id);
+        }
+    }
+
+    public function downloadbastAction($id)
+    { 
+        // echo $id;
+        // die();
+        $file_bast = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        // echo $file_p1->file;
+        // die();
+
+        // var_dump($file_p1);
+        // die();
+        
+        if($file_bast->file)
+        {
+            // echo $file_p1;
+            // die();
+            $upload_dir = __DIR__ . '/../../public/uploads/';
+            $path = $upload_dir.$file_bast->file;
+            $filetype = filetype($path);
+            $filesize = filesize($path);
+            // header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+            // header('Content-Description: File Download');
+            header('Content-type: '.$filetype);
+            header('Content-length: ' . $filesize);
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+            header('Content-Disposition: attachment; filename="'.$file_bast->file.'"');
+            readfile($path);
+
+        }
+        else
+        {
+            return $this->response->redirect('admin/detail'.'/'.$id);
+        }
+    }
 
     public function listAction()
     {

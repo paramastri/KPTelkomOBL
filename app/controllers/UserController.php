@@ -151,4 +151,6 @@ class UserController extends Controller{
         $this->session->destroy();
         $this->response->redirect("user/login");
     }
+
+    // public funct
 }

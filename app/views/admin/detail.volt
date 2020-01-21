@@ -129,7 +129,7 @@
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p0) %}
-                            <a  href="" class="btn btn-primary">Download File P0</a> 
+                            <a   href="../../admin/downloadp0/{{data.id}}" class="btn btn-primary">Download File P0</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -173,7 +173,7 @@
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p1) %}
-                            <a  href="" class="btn btn-primary">Download File P1</a> 
+                            <a  href="../../admin/downloadp1/{{data.id}}" class="btn btn-primary">Download File P1</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -215,7 +215,7 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
              
                     {% if (dokumen_p6) %}
-                            <a  href="" class="btn btn-primary">Download File P6</a> 
+                            <a  href="../../admin/downloadp6/{{data.id}}" class="btn btn-primary">Download File P6</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -262,7 +262,7 @@
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p8) %}
-                            <a  href="" class="btn btn-primary">Download File P8</a> 
+                            <a  href="../../admin/downloadp8/{{data.id}}" class="btn btn-primary">Download File P8</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -307,7 +307,7 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
           
                    {% if (dokumen_kl) %}
-                            <a  href="" class="btn btn-primary">Download File KL</a> 
+                            <a  href="../../admin/downloadkl/{{data.id}}" class="btn btn-primary">Download File KL</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -349,7 +349,7 @@
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                     {% if (dokumen_bast) %}
-                            <a  href="" class="btn btn-primary">Download File BAST Mitra</a> 
+                            <a  href="../../admin/downloadbast/{{data.id}}" class="btn btn-primary">Download File BAST Mitra</a> 
                             {% else %}
                             File belum diunggah
                             {% endif %}
