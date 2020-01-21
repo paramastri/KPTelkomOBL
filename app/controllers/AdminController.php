@@ -1023,57 +1023,86 @@ class AdminController extends Controller
 
             if($listdata->p0 == 1)
             {
-                $status_p0 = "OK";
+                $status_p0 = "true";
             }
             elseif ($listdata->p0 == 2)
             {
-                $status_p0 = "BELUM OK";
+                $status_p0 = "false";
+            }
+            else
+            {
+                $status_p0 = "";
             }
 
             if ($listdata->p1 == 1) 
             {
-                $status_p1 = "OK";
+                $status_p1 = "true";
             }
             elseif ($listdata->p1 == 2) 
             {
-                $status_p1 = "BELUM OK";
+                $status_p1 = "false";
             }
+            else
+            {
+                $status_p1 = "";
+            }
+
 
             if ($listdata->p6 == 1) 
             {
-                $status_p6 = "OK";
+                $status_p6 = "true";
             }
             elseif ($listdata->p6 == 2) 
             {
-                $status_p6 = "BELUM OK";
+                $status_p6 = "false";
             }
+            else
+            {
+                $status_p6 = "";
+            }
+
 
             if ($listdata->p8 == 1) 
             {
-                $status_p8 = "OK";
+                $status_p8 = "true";
             }
             elseif ($listdata->p8 == 2) 
             {
-                $status_p8 = "BELUM OK";
+                $status_p8 = "false";
             }
+            else
+            {
+                $status_p8 = "";
+            }
+
 
             if ($listdata->kl == 1) 
             {
-                $status_kl = "OK";
+                $status_kl = "true";
             }
             elseif ($listdata->kl == 2) 
             {
-                $status_kl = "BELUM OK";
+                $status_kl = "false";
             }
+            else
+            {
+                $status_kl = "";
+            }
+
             
             if ($listdata->bast == 1) 
             {
-                $status_bast = "OK";
+                $status_bast = "true";
             }
             elseif ($listdata->bast == 2) 
             {
-                $status_bast = "BELUM OK";
+                $status_bast = "false";
             }
+            else
+            {
+                $status_bast = "";
+            }
+
 
             $data[] = array(
                 'nama_cc' => $listdata->nama_cc,

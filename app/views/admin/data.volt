@@ -143,17 +143,25 @@
                 {title: "Nama Mitra", field: "nama_mitra", headerFilter:"input"},
                 {title: "Nama Pekerjaan", field: "nama_pekerjaan", headerFilter:"input"},
                 {title: "PIC Mitra", field: "pic_mitra", headerFilter:"input"},
-                {title: "P0", field: "p0", headerFilter:"input"},
-                {title: "P1", field: "p1", headerFilter:"input"},
-                {title: "P6", field: "p6", headerFilter:"input"},
-                {title: "P8", field: "p8", headerFilter:"input"},
-                {title: "KL", field: "kl", headerFilter:"input"},
-                {title: "BAST", field: "bast", headerFilter:"input"},
+                {title: "P0", field: "p0", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
+                {title: "P1", field: "p1", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
+                {title: "P6", field: "p6", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
+                {title: "P8", field: "p8", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
+                {title: "KL", field: "kl", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
+                {title: "BAST", field: "bast", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
                 {
                     title: "Edit", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Edit",
-                        urlPrefix: "",
+                        urlPrefix: "{{ url('admin/berkas/') }}",
+                        // target: "_blank",
+                    }
+                },
+                {
+                    title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Lihat Detail",
+                        urlPrefix: "{{ url('admin/detail/') }}",
                         // target: "_blank",
                     }
                 },
