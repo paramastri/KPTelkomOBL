@@ -55,30 +55,14 @@
                 <h3></h3>
             </div>
 
-            {% if (session.get('admin')['username']) %}
+            <!-- {% if (session.get('admin')['username']) %} -->
             <ul style="margin-left: 10px;" class="list-unstyled">
 
-                <!-- <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
+                <li>
+                    <a href="{{ url('') }}">Form</a>
                 </li>
                 <li>
-                    <a href="{{ url('surat/list') }}">Upload Surat</a>
-                </li> -->
-                
-                <li>
-                    <a href="{{ url('admin/list') }}">Beranda Admin</a>
-                </li>
-                <li>
-                    <a href="{{ url() }}">Generate Nomor Surat</a>
-                </li>
-                <li>
-                    <a href="{{ url('admin/listupload') }}">Upload Surat</a>
-                </li>
-                <li>
-                    <a href="{{ url('admin/verif') }}">Verifikasi Akun User</a>
-                </li>
-                <li>
-                    <a href="{{ url('admin/jenissurat') }}">Tambah Jenis Surat</a>
+                    <a href="{{ url('admin/data') }}">Data</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('admin')['username'] }}</a>
@@ -93,18 +77,12 @@
                 </li>
             </ul>
 
-            {% else %}
+           <!--  {% else %} -->
 
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
-                </li>
-                <li>
-                    <a href="{{ url('surat/daftarsurat') }}">List Surat</a>
-                </li>
-                <li>
-                    <a href="{{ url('surat/list') }}">Upload Surat</a>
+                    <a href="{{ url('user/datauser') }}">Data</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('user')['username'] }}</a>
@@ -112,13 +90,10 @@
                         <li>
                             <a href="{{ url('user/logout') }}">Keluar</a>
                         </li>
-                        <!-- <li>
-                            <a href="{{ url('user/logout') }}">Keluar</a>
-                        </li> -->
                     </ul>
                 </li>
             </ul>
-            {% endif %}
+            <!-- {% endif %} -->
 
 
         </nav>

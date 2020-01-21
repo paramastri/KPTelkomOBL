@@ -57,15 +57,46 @@
             </div>
 
 
-            <ul style="margin-left: 10px; margin-top: 30px;" class="list-unstyled">
+            
+            <!-- {% if (session.get('admin')['username']) %} -->
+            <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="#">Form</a>
+                    <a href="{{ url('') }}">Form</a>
                 </li>
                 <li>
-                    <a href="#">Data</a>
+                    <a href="{{ url('admin/data') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('admin')['username'] }}</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('admin/register') }}">Daftar</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+
+           <!--  {% else %} -->
+
+            <ul style="margin-left: 10px;" class="list-unstyled">
+
+                <li>
+                    <a href="{{ url('user/datauser') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('user')['username'] }}</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- {% endif %} -->
 
 
 
