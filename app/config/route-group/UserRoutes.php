@@ -49,6 +49,39 @@ class UserRoutes extends RouterGroup{
                 'action' => 'logout'
             ]
         );
+        $this->addGet(
+            '/datauser',
+            [
+                'controller' => 'user',
+                'action' => 'datauser'
+            ]
+        );
+
+        $this->addGet(
+            '/listdatauser',
+            [
+                'controller' => 'user',
+                'action' => 'listdatauser'
+            ]
+        );
+
+        $this->addGet(
+            '/listdatauserview/{id}',
+            [
+                'controller' => 'user',
+                'action' => 'listdatauserview'
+            ]
+        );
+
+        $this->addGet(
+            '/detailuser/{id}',
+            [
+                'controller' => 'user',
+                'action' => 'detailuser'
+            ]
+        );
+
+
 
 
     }

@@ -81,19 +81,49 @@
         <nav id="sidebar">
             <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-            <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Progres NCX</h6>
+            <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Status OBL</h6>
             </div>
 
 
-            <ul style="margin-left: 10px; margin-top: 30px;" class="list-unstyled">
+            <!-- {% if (session.get('admin')['username']) %} -->
+            <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('') }}">Form</a>
+                    <a href="{{ url('admin/form') }}">Form</a>
                 </li>
                 <li>
-                    <a href="{{ url('data') }}">Data</a>
+                    <a href="{{ url('admin/data') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('admin')['username'] }}</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('admin/register') }}">Daftar</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+
+           <!--  {% else %} -->
+
+            <ul style="margin-left: 10px;" class="list-unstyled">
+
+                <li>
+                    <a href="{{ url('user/datauser') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('user')['username'] }}</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- {% endif %} -->
 
 
 
@@ -112,7 +142,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">List Data Progres NCX</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">List Data Dokumen OBL</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -153,14 +183,14 @@
                     title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Lihat Detail",
-                        urlPrefix: "{{ url('admin/detail/') }}",
+                        urlPrefix: "{{ url('user/detailuser/') }}",
                         // target: "_blank",
                     }
                 },
                 
             ],
         });
-        table.setData("{{ url('admin/list') }}");
+        table.setData("{{ url('user/listdatauser') }}");
     </script>
         </div>
 
