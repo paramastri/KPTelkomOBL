@@ -185,6 +185,22 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/form',
+            [
+                'controller' => 'admin',
+                'action' => 'form'
+            ]
+        );
+
+        $this->addPost(
+            '/storedata',
+            [
+                'controller' => 'admin',
+                'action' => 'storedata'
+            ]
+        );
+
 
 
 

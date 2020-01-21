@@ -1267,4 +1267,32 @@ class AdminController extends Controller
         ]);
         $this->view->dokumen_bast = $dokumen_bast;
     }
+
+    public function formAction()
+    {
+
+    }
+
+    public function storedataAction()
+    {
+        $obl = new obl();
+        $nama_cc = $this->request->getPost('nama_cc');
+        $nama_mitra = $this->request->getPost('nama_mitra');
+        $nama_pekerjaan = $this->request->getPost('nama_pekerjaan');
+        $pic_mitra = $this->request->getPost('pic_mitra');
+
+        $obl->nama_cc = $nama_cc;
+        $obl->nama_mitra = $nama_mitra;
+        $obl->nama_pekerjaan = $nama_pekerjaan;
+        $obl->pic_mitra = $pic_mitra;
+        // echo $obl->nama_cc;
+        // die();
+        $obl->save();
+        $max = obl::maximum(
+            [
+                'column' => 'id',
+            ]
+        );
+        $this->response->redirect('admin/berkas'.'/'.$max);
+    }
 }
