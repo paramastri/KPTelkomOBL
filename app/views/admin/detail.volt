@@ -128,11 +128,11 @@
                             <form action="{{ url("admin/berkasp0") }}" method="post" enctype="multipart/form-data">
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
-                            <!-- {% if (data.file) %} -->
+                            {% if (dokumen_p0) %}
                             <a  href="" class="btn btn-primary">Download File P0</a> 
-                            <!-- {% else %}
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -148,10 +148,12 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %}
-                            <div class="form-group">
-                                <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-                          <!--       <textarea name = "keterangan_p0" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                            </div>              
+                            <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p0) %}
+                                {{keterangan_p0.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}       
                             <!-- <button  style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                           <!--   <h1 style="color: green; font-weight: bold; text-align: center; font-size: 100pt;">✔ </h1> -->
                           </div>
@@ -170,11 +172,11 @@
                     <form action="{{ url("admin/berkasp1") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
-                    <!-- {% if (data.file) %} -->
+                            {% if (dokumen_p1) %}
                             <a  href="" class="btn btn-primary">Download File P1</a> 
-                            <!-- {% else %}
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -190,10 +192,12 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %}
-                    <div class="form-group">
-                        <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-                      <!--   <textarea name = "keterangan_p1" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                    </div>              
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p1) %}
+                                {{keterangan_p1.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}              
                     <!-- <button style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                     </form>
                   </div>
@@ -210,11 +214,11 @@
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
              
-                    <!-- {% if (data.file) %} -->
-                            <a  href="" class="btn btn-primary">Download File P6</a> </li>
-                            <!-- {% else %}
+                    {% if (dokumen_p6) %}
+                            <a  href="" class="btn btn-primary">Download File P6</a> 
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -230,10 +234,13 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %}
-                    <div class="form-group">
-                        <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-                      <!--   <textarea name= "keterangan_p6" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                    </div>              
+                    
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p6) %}
+                                {{keterangan_p6.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}              
                     <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                   </div>
                 </form>
@@ -254,11 +261,11 @@
                             <form action="{{ url("admin/berkasp8") }}" method="post" enctype="multipart/form-data">
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
-                            <!-- {% if (data.file) %} -->
+                            {% if (dokumen_p8) %}
                             <a  href="" class="btn btn-primary">Download File P8</a> 
-                            <!-- {% else %}
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -274,10 +281,13 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %}
-                            <div class="form-group">
-                                <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-                      <!--           <textarea name="keterangan_p8" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                            </div>              
+                            
+                            <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p8) %}
+                                {{keterangan_p8.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}               
                             <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                           </form>
                           </div>
@@ -296,11 +306,11 @@
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
           
-                    <!-- {% if (data.file) %} -->
+                   {% if (dokumen_kl) %}
                             <a  href="" class="btn btn-primary">Download File KL</a> 
-                            <!-- {% else %}
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -316,10 +326,14 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %} 
-                    <div class="form-group">
-                        <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-        <!--                 <textarea name="keterangan_kl" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                    </div>              
+                    
+
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_kl) %}
+                                {{keterangan_kl.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}               
                     <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                   </form>
                   </div>
@@ -334,11 +348,11 @@
                     <form action="{{ url("admin/berkasbast") }}" method="post" enctype="multipart/form-data">
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
-                    <!-- {% if (data.file) %} -->
-                    <a  href="" class="btn btn-primary">Download File BAST Mitra</a> 
-                            <!-- {% else %}
+                    {% if (dokumen_bast) %}
+                            <a  href="" class="btn btn-primary">Download File BAST Mitra</a> 
+                            {% else %}
                             File belum diunggah
-                            {% endif %} -->
+                            {% endif %}
                              
                             <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -354,10 +368,14 @@
                             {% else %}
                             BELUM TERISI
                             {% endif %}
-                    <div class="form-group">
-                        <label style="margin-top: 20px; font-weight: bold;" for="exampleFormControlTextarea1" >Keterangan</label>
-     <!--                    <textarea name = "keterangan_bast" class="form-control" placeholder="Masukkan Keterangan..." id="exampleFormControlTextarea1" rows="3" ></textarea> -->
-                    </div>              
+                    
+
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_bast) %}
+                                {{keterangan_bast.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}                
                     <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
                   </form>
                   </div>

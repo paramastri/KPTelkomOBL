@@ -127,6 +127,14 @@ class AdminRoutes extends RouterGroup
             ]
         );
 
+        $this->addGet(
+            '/detail/{id}',
+            [
+                'controller' => 'admin',
+                'action' => 'detail'
+            ]
+        );
+
 
 
 

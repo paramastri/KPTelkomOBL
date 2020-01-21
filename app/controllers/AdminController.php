@@ -884,4 +884,118 @@ class AdminController extends Controller
         $obl->save();
         $this->response->redirect('admin/berkas'.'/'.$id_obl);
     }
+
+    public function detailAction($id)
+    {
+        $data = obl::findFirst("id='$id'");
+        $this->view->data = $data;
+
+        $keterangan_p0 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '1',
+            ]
+        ]);
+        $this->view->keterangan_p0 = $keterangan_p0;
+
+        $keterangan_p1 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '2',
+            ]
+        ]);
+        $this->view->keterangan_p1 = $keterangan_p1;
+
+        $keterangan_p6 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '3',
+            ]
+        ]);
+        $this->view->keterangan_p6 = $keterangan_p6;
+
+        $keterangan_p8 = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '4',
+            ]
+        ]);
+        $this->view->keterangan_p8 = $keterangan_p8;
+
+        $keterangan_kl = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        $this->view->keterangan_kl = $keterangan_kl;
+
+        $keterangan_bast = keterangan::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '6',
+            ]
+        ]);
+        $this->view->keterangan_bast = $keterangan_bast;
+
+        $dokumen_p0 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '1',
+            ]
+        ]);
+        $this->view->dokumen_p0 = $dokumen_p0;
+
+        $dokumen_p1 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '2',
+            ]
+        ]);
+        $this->view->dokumen_p1 = $dokumen_p1;
+
+        $dokumen_p6 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '3',
+            ]
+        ]);
+        $this->view->dokumen_p6 = $dokumen_p6;
+
+        $dokumen_p8 = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '4',
+            ]
+        ]);
+        $this->view->dokumen_p8 = $dokumen_p8;
+
+        $dokumen_kl = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '5',
+            ]
+        ]);
+        $this->view->dokumen_kl = $dokumen_kl;
+
+        $dokumen_bast = file::findFirst([
+            'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+            'bind' => [
+                'id_obl' => $id,
+                'id_tipe' => '6',
+            ]
+        ]);
+        $this->view->dokumen_bast = $dokumen_bast;
+    }
 }
