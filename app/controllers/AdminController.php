@@ -68,16 +68,30 @@ class AdminController extends Controller
         // echo $obl->p0;
         // die();
         $obl->save();
-        
-        if($keterangan_p0){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 1;
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_p0;
-            // var_dump ($keterangan->keterangan);
-            // die();
-            $keterangan->save();
+
+        if($keterangan_p0)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '1',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_p0;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 1;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_p0;
+                $newketerangan->save();
+            }
         }
 
         $val2 = new FileValidation();
@@ -99,7 +113,7 @@ class AdminController extends Controller
                 // echo("punya file"); die();
                 if (!is_dir($upload_dir)) {
                   mkdir($upload_dir, 0755);
-                  echo("punya file"); die();
+                //   echo("punya file"); die();
                 }
                 foreach ($this->request->getUploadedFiles() as $file_p0) {
                     $temp = explode(".", $_FILES["file"]["name"]);
@@ -137,15 +151,40 @@ class AdminController extends Controller
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
 
-        if($keterangan_p1){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 2;
-            // echo $keterangan->id_tipe;
-            // die();
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_p1;
-            $keterangan->save();
+        // if($keterangan_p1){
+        //     $keterangan = new keterangan();
+        //     // $keterangan->id_tipe = $this->request->getPost('1');
+        //     $keterangan->id_tipe = 2;
+        //     // echo $keterangan->id_tipe;
+        //     // die();
+        //     $keterangan->id_obl = $id_obl;
+        //     $keterangan->keterangan = $keterangan_p1;
+        //     $keterangan->save();
+        // }
+
+        if($keterangan_p1)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '2',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_p1;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 2;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_p1;
+                $newketerangan->save();
+            }
         }
 
         if (count($messages2)) {
@@ -201,13 +240,38 @@ class AdminController extends Controller
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
 
-        if($keterangan_p6){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 3;
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_p6;
-            $keterangan->save();
+        // if($keterangan_p6){
+        //     $keterangan = new keterangan();
+        //     // $keterangan->id_tipe = $this->request->getPost('1');
+        //     $keterangan->id_tipe = 3;
+        //     $keterangan->id_obl = $id_obl;
+        //     $keterangan->keterangan = $keterangan_p6;
+        //     $keterangan->save();
+        // }
+
+        if($keterangan_p6)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '3',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_p6;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 3;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_p6;
+                $newketerangan->save();
+            }
         }
 
         if (count($messages2)) {
@@ -259,13 +323,38 @@ class AdminController extends Controller
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
 
-        if($keterangan_p8){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 4;
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_p8;
-            $keterangan->save();
+        // if($keterangan_p8){
+        //     $keterangan = new keterangan();
+        //     // $keterangan->id_tipe = $this->request->getPost('1');
+        //     $keterangan->id_tipe = 4;
+        //     $keterangan->id_obl = $id_obl;
+        //     $keterangan->keterangan = $keterangan_p8;
+        //     $keterangan->save();
+        // }
+
+        if($keterangan_p8)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '4',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_p8;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 4;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_p8;
+                $newketerangan->save();
+            }
         }
 
         if (count($messages2)) {
@@ -318,13 +407,38 @@ class AdminController extends Controller
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
 
-        if($keterangan_kl){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 5;
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_kl;
-            $keterangan->save();
+        // if($keterangan_kl){
+        //     $keterangan = new keterangan();
+        //     // $keterangan->id_tipe = $this->request->getPost('1');
+        //     $keterangan->id_tipe = 5;
+        //     $keterangan->id_obl = $id_obl;
+        //     $keterangan->keterangan = $keterangan_kl;
+        //     $keterangan->save();
+        // }
+
+        if($keterangan_kl)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '5',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_kl;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 5;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_kl;
+                $newketerangan->save();
+            }
         }
 
         if (count($messages2)) {
@@ -376,13 +490,38 @@ class AdminController extends Controller
         $val2 = new FileValidation();
         $messages2 = $val2->validate($_FILES);
 
-        if($keterangan_bast){
-            $keterangan = new keterangan();
-            // $keterangan->id_tipe = $this->request->getPost('1');
-            $keterangan->id_tipe = 6;
-            $keterangan->id_obl = $id_obl;
-            $keterangan->keterangan = $keterangan_bast;
-            $keterangan->save();
+        // if($keterangan_bast){
+        //     $keterangan = new keterangan();
+        //     // $keterangan->id_tipe = $this->request->getPost('1');
+        //     $keterangan->id_tipe = 6;
+        //     $keterangan->id_obl = $id_obl;
+        //     $keterangan->keterangan = $keterangan_bast;
+        //     $keterangan->save();
+        // }
+
+        if($keterangan_bast)
+        {
+            $keterangan = keterangan::findFirst([
+                'id_obl = :id_obl: AND id_tipe = :id_tipe:',
+                'bind' => [
+                    'id_obl' => $id_obl,
+                    'id_tipe' => '6',
+                ]
+            ]);
+
+            if($keterangan)
+            {
+                $keterangan->keterangan = $keterangan_bast;
+                $keterangan->save();
+
+            }
+            else{
+                $newketerangan = new keterangan();
+                $newketerangan->id_tipe = 6;
+                $newketerangan->id_obl = $id_obl;
+                $newketerangan->keterangan = $keterangan_bast;
+                $newketerangan->save();
+            }
         }
 
         if (count($messages2)) {
