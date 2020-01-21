@@ -4,7 +4,7 @@
 <head>
     <title>Status Dokumen OBL</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="icon" href="../favicon.png" type="png" sizes="16x16">
+    <link rel="icon" href="favicon.png" type="png" sizes="16x16">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 
 
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="../style5.css">
+    <link rel="stylesheet" href="style5.css">
 
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -38,6 +38,7 @@
                 $(this).toggleClass('active');
             });
         });
+
     </script>
 
 </head>
@@ -50,36 +51,54 @@
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
-            <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
+            <img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-              
-                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Status OBL</h6>
+            <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Status OBL</h6>
             </div>
 
-  
+
+            <!-- {% if (session.get('admin')['username']) %} -->
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('user/register') }}">Daftar</a>
-                </li>
-                <!-- <li>
-                    <a href="{{ url('detailnomor') }}">Upload Surat</a>
+                    <a href="{{ url('admin/form') }}">Form</a>
                 </li>
                 <li>
-                    <a href="{{ url('halamanadmin') }}">Beranda Admin</a>
-                </li> -->
-                <!-- <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Masuk </a>
+                    <a href="{{ url('admin/data') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('admin')['username'] }}</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="">Daftar</a>
+                            <a href="{{ url('admin/register') }}">Daftar</a>
                         </li>
                         <li>
-                            <a href="">Masuk</a>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
             </ul>
+
+           <!--  {% else %} -->
+
+            <ul style="margin-left: 10px;" class="list-unstyled">
+
+                <li>
+                    <a href="{{ url('user/datauser') }}">Data</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ session.get('user')['username'] }}</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('user/logout') }}">Keluar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- {% endif %} -->
+
+
+
         </nav>
 
 
@@ -94,7 +113,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Masuk</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Form Status Dokumen OBL</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -104,44 +123,41 @@
                 </div>
             </nav>
 
-            <div style="margin-left: 90px; margin-top: 30px; width: 30%; font-family:'GothamRounded-Medium';">
-            <p><?php echo $this->flashSession->output() ?></p>
-            
-            </div>
-        <div>
-            <form action="{{ url("user/login") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
-                <div class="form-group">
-                    <label>Username</label>
+            <div>
+            <form action="{{ url("storedata") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
 
-                    <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
+                <div class="form-group">
+                    <label >Nama CC</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama CC" name="nama_cc" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Password</label>
-
-                    <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
-
+                    <label s>Nama Mitra</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Mitra" name="nama_mitra" required>
                 </div>
 
-                <div>
-                    <label style="margin-top: 0px;">Masuk Sebagai</label>
-                </div>
-
-                <div class="custom-control custom-radio">
-                  <input value="user" type="radio" class="custom-control-input" id="defaultChecked" name="tipe" checked>
-                  <label class="custom-control-label" for="defaultChecked">User</label>
-                </div>
-
-                <div class="custom-control custom-radio" >
-                  <input value="admin" type="radio" class="custom-control-input" id="defaultUnchecked" name="tipe">
-                  <label class="custom-control-label" for="defaultUnchecked">Admin</label>
+                <div class="form-group">
+                    <label>Nama Pekerjaan</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Pekerjaan" name="nama_pekerjaan" required>
                 </div>
 
 
-                <button value = "masuk" style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
+                <div class="form-group">
+                    <label>PIC Mitra</label>
+                    <input type="text" class="form-control" placeholder="Masukkan PIC Mitra" name="pic_mitra" required>
+                </div>
+
+               
+                <button style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</button>
+<!--                 <a style="margin-top: 20px; margin-bottom: 30px; color: white;" type="submit" class="btn btn-primary">Lanjutkan</a> -->
             </form>
-        </div>
-</div>
+            </div>
+
+
+            
+            
+            </form>
+
 
 </body>
 

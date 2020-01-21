@@ -61,7 +61,7 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('') }}">Form</a>
+                    <a href="{{ url('admin/form') }}">Form</a>
                 </li>
                 <li>
                     <a href="{{ url('admin/data') }}">Data</a>

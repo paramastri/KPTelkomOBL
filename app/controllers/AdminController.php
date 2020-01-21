@@ -34,7 +34,7 @@ class AdminController extends Controller
         else
         {
             $admin->save();
-            $this->response->redirect('admin/list');
+            $this->response->redirect('admin/data');
 
         }
         

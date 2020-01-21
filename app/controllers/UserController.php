@@ -54,7 +54,7 @@ class UserController extends Controller{
 	                    ]
 	                );
 
-	                (new Response())->redirect('admin/list')->send();
+	                (new Response())->redirect('admin/data')->send();
 	            }
 	            else{
 	                $this->flashSession->error("Gagal masuk sebagai admin. Silakan cek kembali username dan password anda.");
@@ -94,7 +94,7 @@ class UserController extends Controller{
 		                    ]
 		                );
 
-		                (new Response())->redirect('')->send();
+		                (new Response())->redirect('user/datauser')->send();
 		            }
 		            else{
 		                $this->flashSession->error("Gagal masuk sebagai user. Silakan cek kembali username dan password anda.");
@@ -122,7 +122,7 @@ class UserController extends Controller{
     	// $_isAdmin = $this->session->get('admin')['tipe'];
      //    $_isUser = $this->session->get('user')['tipe'];
      //    if ($_isAdmin == 1) {
-     //        $this->response->redirect('admin/list');
+     //        $this->response->redirect('admin/data');
      //    }
      //    if($_isUser)
      //    {
@@ -136,7 +136,7 @@ class UserController extends Controller{
     	// $_isAdmin = $this->session->get('admin')['tipe'];
      //    $_isUser = $this->session->get('user')['tipe'];
      //    if ($_isAdmin == 1) {
-     //        $this->response->redirect('admin/list');
+     //        $this->response->redirect('admin/data');
      //    }
      //    if($_isUser)
      //    {

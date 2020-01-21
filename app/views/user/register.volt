@@ -53,7 +53,7 @@
             <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
               
-                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Nomor Surat</h6>
+                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Dokumen OBL</h6>
             </div>
 
   

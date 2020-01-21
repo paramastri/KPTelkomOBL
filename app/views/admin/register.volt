@@ -52,14 +52,14 @@
         <nav id="sidebar">
             <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-                <h3></h3>
+                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Dokumen OBL</h6>
             </div>
 
             <!-- {% if (session.get('admin')['username']) %} -->
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('') }}">Form</a>
+                    <a href="{{ url('admin/form') }}">Form</a>
                 </li>
                 <li>
                     <a href="{{ url('admin/data') }}">Data</a>
