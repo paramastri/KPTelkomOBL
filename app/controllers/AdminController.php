@@ -10,12 +10,12 @@ class AdminController extends Controller
 
     public function registerAction()
     {   
-        $id = $this->session->get('admin')['tipe'];
-        if ($id == NULL) {
-            // echo "berhasil login";
-            // die();
-        (new Response())->redirect('user/login')->send();          
-        }
+        // $id = $this->session->get('admin')['tipe'];
+        // if ($id == NULL) {
+        //     // echo "berhasil login";
+        //     // die();
+        // (new Response())->redirect('user/login')->send();          
+        // }
     }
 
     public function storeregisterAction(){
