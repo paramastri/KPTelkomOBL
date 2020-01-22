@@ -100,7 +100,7 @@ class UserController extends Controller{
 		                $this->flashSession->error("Gagal masuk sebagai user. Silakan cek kembali username dan password anda.");
 		                $this->response->redirect('user/login');
 		            }
-		        }
+		        //}
 		        // else {
 		        // 	// echo"belum verifikasi";
 		        // 	// die();
@@ -108,12 +108,16 @@ class UserController extends Controller{
 		            
 		        //     $this->response->redirect('user/login');
 		        // }
-	    	}
+	       }
 	        else{
 	            $this->flashSession->error("Gagal masuk sebagai user. Silakan cek kembali username dan password anda.");
 	            $this->response->redirect('user/login');
 	        }
-        // }
+
+        }
+
+
+
 
     }
 
