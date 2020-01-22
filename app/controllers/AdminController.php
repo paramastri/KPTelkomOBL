@@ -230,9 +230,6 @@ class AdminController extends Controller
         else
         {   
             $obl = obl::findFirst("id='$id_obl'");
-            // $penomoran = (explode('/',$surat->no_surat,4));
-            // $nomorsaja = (explode('.',$penomoran[0],2));
-            
 
             if (true == $this->request->hasFiles() && $this->request->isPost()) {
                 $upload_dir = __DIR__ . '/../../public/uploads/';
@@ -246,7 +243,7 @@ class AdminController extends Controller
 
                     $file_p0->moveTo($upload_dir . $file_p0->getName());
                     $lama = $upload_dir.$file_p0->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-p0.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-p0.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -261,7 +258,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-p0.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-p0.'.end($temp);
                 $cekfile->save();
 
             }
@@ -269,11 +266,9 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 1;
-                $berkas->file = $obl->nama_cc.'-p0.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-p0.'.end($temp);
                 $berkas->save();
             }
-            
-            // $this->response->redirect('admin/berkas'.'/'.$id_obl);
         }
 
 
@@ -358,7 +353,7 @@ class AdminController extends Controller
 
                     $file_p1->moveTo($upload_dir . $file_p1->getName());
                     $lama = $upload_dir.$file_p1->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-p1.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-p1.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -373,7 +368,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-p1.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-p1.'.end($temp);
                 $cekfile->save();
 
             }
@@ -381,7 +376,7 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 2;
-                $berkas->file = $obl->nama_cc.'-p1.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-p1.'.end($temp);
                 $berkas->save();
             }
         }
@@ -458,7 +453,7 @@ class AdminController extends Controller
 
                     $file_p6->moveTo($upload_dir . $file_p6->getName());
                     $lama = $upload_dir.$file_p6->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-p6.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-p6.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -473,7 +468,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-p6.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-p6.'.end($temp);
                 $cekfile->save();
 
             }
@@ -481,7 +476,7 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 3;
-                $berkas->file = $obl->nama_cc.'-p6.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-p6.'.end($temp);
                 $berkas->save();
             }
         }
@@ -558,7 +553,7 @@ class AdminController extends Controller
 
                     $file_p8->moveTo($upload_dir . $file_p8->getName());
                     $lama = $upload_dir.$file_p8->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-p8.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-p8.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -573,7 +568,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-p8.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-p8.'.end($temp);
                 $cekfile->save();
 
             }
@@ -581,7 +576,7 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 4;
-                $berkas->file = $obl->nama_cc.'-p8.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-p8.'.end($temp);
                 $berkas->save();
             }
         }
@@ -659,7 +654,7 @@ class AdminController extends Controller
 
                     $file_kl->moveTo($upload_dir . $file_kl->getName());
                     $lama = $upload_dir.$file_kl->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-kl.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-kl.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -674,7 +669,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-kl.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-kl.'.end($temp);
                 $cekfile->save();
 
             }
@@ -682,7 +677,7 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 5;
-                $berkas->file = $obl->nama_cc.'-kl.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-kl.'.end($temp);
                 $berkas->save();
             }
         }
@@ -759,7 +754,7 @@ class AdminController extends Controller
 
                     $file_bast->moveTo($upload_dir . $file_bast->getName());
                     $lama = $upload_dir.$file_bast->getName();
-                    $baru = $upload_dir.$obl->nama_cc.'-bast.'.end($temp);
+                    $baru = $upload_dir.$obl->nama_cc.$obl->id.'-bast.'.end($temp);
                     rename($lama, $baru); 
                 }
             }
@@ -774,7 +769,7 @@ class AdminController extends Controller
 
             if($cekfile)
             {
-                $cekfile->file = $obl->nama_cc.'-bast.'.end($temp);
+                $cekfile->file = $obl->nama_cc.$obl->id.'-bast.'.end($temp);
                 $cekfile->save();
 
             }
@@ -782,7 +777,7 @@ class AdminController extends Controller
                 $berkas = new file();
                 $berkas->id_obl = $id_obl;
                 $berkas->id_tipe = 6;
-                $berkas->file = $obl->nama_cc.'-bast.'.end($temp);
+                $berkas->file = $obl->nama_cc.$obl->id.'-bast.'.end($temp);
                 $berkas->save();
             }
         }
