@@ -151,7 +151,7 @@
 </table>
 </div>
 
-            <div style="margin-left: 0px; margin-top: 30px; width: 60%; font-family:'GothamRounded-Medium';">
+            <div style="margin-left: 0px; margin-top: 30px; width: 100%; font-family:'GothamRounded-Medium';">
               <p><?php echo $this->flashSession->output() ?></p>
             </div>
 

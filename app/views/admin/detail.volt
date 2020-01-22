@@ -151,6 +151,48 @@
 
 
                 <div class="row" style="font-family:'GothamRounded-Medium';">
+                {% if (dokumen_p0) %} 
+                  <div class="col-6 col-md-4">
+
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88; ">
+                          <div class="card-body">
+                            <form action="{{ url("admin/berkasp0") }}" method="post" enctype="multipart/form-data">
+                            <h5 class="card-title" style="font-size: 30pt;">P0</h5>
+                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+                            {% if (dokumen_p0) %}
+                            <a   href="../../admin/downloadp0/{{data.id}}" class="btn btn-primary">Download File P0</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
+
+                            {% if (data.p0 == 1) %}
+                            OK
+                            {% elseif (data.p0 == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %}
+                            <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p0) %}
+                                {{keterangan_p0.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}       
+                            <!-- <button  style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                          <!--   <h1 style="color: green; font-weight: bold; text-align: center; font-size: 100pt;">✔ </h1> -->
+                          </div>
+                        </form>
+                    </div>
+
+                  </div>
+                  {% else %}
                   <div class="col-6 col-md-4">
 
                     <div class="card" style="width: 20rem; float: left; background-color: #d5d9e0; ">
@@ -191,12 +233,51 @@
                     </div>
 
                   </div>
+                  {% endif %}
 
 
-
+                  {% if (dokumen_p1) %}
                   <div class="col-6 col-md-4">
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88;">
+                  <div class="card-body">
+                    <form action="{{ url("admin/berkasp1") }}" method="post" enctype="multipart/form-data">
+                    <h5 class="card-title" style="font-size: 30pt;">P1</h5>
+                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+                            {% if (dokumen_p1) %}
+                            <a  href="../../admin/downloadp1/{{data.id}}" class="btn btn-primary">Download File P1</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
 
+                            {% if (data.p1 == 1) %}
+                            OK
+                            {% elseif (data.p1 == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %}
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p1) %}
+                                {{keterangan_p1.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}              
+                    <!-- <button style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                    </form>
+                  </div>
+                
+                </div>  
 
+                  </div>
+                  {% else %}
+                  <div class="col-6 col-md-4">
                     <div class="card" style="width: 20rem; float: left; background-color: #d5d9e0;">
                   <div class="card-body">
                     <form action="{{ url("admin/berkasp1") }}" method="post" enctype="multipart/form-data">
@@ -235,9 +316,54 @@
                 </div>  
 
                   </div>
+                  {% endif %}
 
 
+
+
+                  {% if (dokumen_p6) %}
                   <div class="col-6 col-md-4">
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88;">
+                  <div class="card-body">
+                    <form action="{{ url("admin/berkasp6") }}" method="post" enctype="multipart/form-data">
+                    <h5 class="card-title" style="font-size: 30pt;">P6</h5>
+                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+             
+                    {% if (dokumen_p6) %}
+                            <a  href="../../admin/downloadp6/{{data.id}}" class="btn btn-primary">Download File P6</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
+
+                            {% if (data.p6 == 1) %}
+                            OK
+                            {% elseif (data.p6 == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %}
+                    
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p6) %}
+                                {{keterangan_p6.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}              
+                    <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                  </div>
+                </form>
+                </div>  
+                  </div>
+                </div>
+                {% else %}
+                <div class="col-6 col-md-4">
                     <div class="card" style="width: 20rem; float: left; background-color: #d5d9e0;">
                   <div class="card-body">
                     <form action="{{ url("admin/berkasp6") }}" method="post" enctype="multipart/form-data">
@@ -277,6 +403,7 @@
                 </div>  
                   </div>
                 </div>
+                {% endif %}
 
 
 
@@ -284,6 +411,48 @@
 
 
                 <div class="row" style="font-family:'GothamRounded-Medium'; margin-top: 30px; margin-bottom: 30px;">
+                    {% if (dokumen_p8) %}
+                  <div class="col-6 col-md-4">
+
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88;">
+                          <div class="card-body">
+                            <form action="{{ url("admin/berkasp8") }}" method="post" enctype="multipart/form-data">
+                            <h5 class="card-title" style="font-size: 30pt;">P8</h5>
+                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+                            {% if (dokumen_p8) %}
+                            <a  href="../../admin/downloadp8/{{data.id}}" class="btn btn-primary">Download File P8</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
+
+                            {% if (data.p8 == 1) %}
+                            OK
+                            {% elseif (data.p8 == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %}
+                            
+                            <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_p8) %}
+                                {{keterangan_p8.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}               
+                            <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                          </form>
+                          </div>
+                    </div>
+
+                  </div>
+                  {% else %}
                   <div class="col-6 col-md-4">
 
                     <div class="card" style="width: 20rem; float: left; background-color: #d5d9e0;">
@@ -324,9 +493,54 @@
                     </div>
 
                   </div>
+                  {% endif %}
 
 
+                  {% if (dokumen_kl) %}
+                  <div class="col-6 col-md-4">
 
+
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88;">
+                  <div class="card-body">
+                    <form action="{{ url("admin/berkaskl") }}" method="post" enctype="multipart/form-data">
+                    <h5 class="card-title" style="font-size: 30pt;">KL</h5>
+                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+          
+                   {% if (dokumen_kl) %}
+                            <a  href="../../admin/downloadkl/{{data.id}}" class="btn btn-primary">Download File KL</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
+
+                            {% if (data.kl == 1) %}
+                            OK
+                            {% elseif (data.kl == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %} 
+                    
+
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_kl) %}
+                                {{keterangan_kl.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}               
+                    <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                  </form>
+                  </div>
+                </div>  
+
+                  </div>
+                  {% else %}
                   <div class="col-6 col-md-4">
 
 
@@ -370,8 +584,50 @@
                 </div>  
 
                   </div>
+                  {% endif %}
 
 
+                  {% if (dokumen_bast) %}
+                  <div class="col-6 col-md-4">
+                    <div class="card" style="width: 20rem; float: left; background-color: #69fa88;">
+                  <div class="card-body">
+                    <form action="{{ url("admin/berkasbast") }}" method="post" enctype="multipart/form-data">
+                    <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
+                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
+                    {% if (dokumen_bast) %}
+                            <a  href="../../admin/downloadbast/{{data.id}}" class="btn btn-primary">Download File BAST Mitra</a> 
+                            {% else %}
+                            File belum diunggah
+                            {% endif %}
+                             
+                            <h6 class="card-subtitle mb-2 "style="font-weight: bold; margin-top: 30px;">Status</h6>
+                            <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
+                              <option value="0"></option>
+                              <option value="1">OK</option>
+                              <option value="2">Belum OK</option>
+                            </select> -->  
+
+                            {% if (data.bast == 1) %}
+                            OK
+                            {% elseif (data.bast == 2) %}
+                            Belum OK
+                            {% else %}
+                            BELUM TERISI
+                            {% endif %}
+                    
+
+                    <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 20px;">Keterangan</h6>    
+                                {% if (keterangan_bast) %}
+                                {{keterangan_bast.keterangan}}
+                                {% else %}
+                                Belum ada keterangan
+                                {% endif %}                
+                    <!-- <button value = "" style="margin-top: 0px; margin-bottom: 0px; color: white;" type="submit" class="btn btn-primary">Simpan</button> -->
+                  </form>
+                  </div>
+                </div>  
+                  </div>
+                  {% else %}
                   <div class="col-6 col-md-4">
                     <div class="card" style="width: 20rem; float: left; background-color: #d5d9e0;">
                   <div class="card-body">
@@ -411,6 +667,7 @@
                   </div>
                 </div>  
                   </div>
+                  {% endif %}
                 </div>
 
 </body>

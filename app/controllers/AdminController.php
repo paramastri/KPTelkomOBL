@@ -224,7 +224,7 @@ class AdminController extends Controller
         $messages2 = $val2->validate($_FILES);
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
         }
         else
@@ -327,7 +327,7 @@ class AdminController extends Controller
         }
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
 
         }
@@ -431,7 +431,7 @@ class AdminController extends Controller
         }
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
         }
         else
@@ -531,7 +531,7 @@ class AdminController extends Controller
         }
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
         }
         else
@@ -632,7 +632,7 @@ class AdminController extends Controller
         }
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
         }
         else
@@ -732,7 +732,7 @@ class AdminController extends Controller
         }
 
         if (count($messages2)) {
-            $this->flashSession->error("GAGAL UPLOAD. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB");
+            $this->flashSession->error("Gagal unggah. Pastikan format file .pdf dan ukuran tidak melebihi 5 MB. Abaikan pesan ini jika anda hanya mengubah status dan tidak melakukan perubahan pengunggahan file.");
             return $this->response->redirect('admin/berkas' . '/' . $id_obl);
         }
         else
