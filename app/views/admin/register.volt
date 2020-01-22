@@ -52,7 +52,7 @@
         <nav id="sidebar">
             <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Dokumen OBL</h6>
+                <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%; font-size: 11pt;">Website Dokumen OBL</h6>
             </div>
 
             <!-- {% if (session.get('admin')['username']) %} -->
