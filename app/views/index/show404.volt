@@ -57,7 +57,7 @@
             <div class="container">
               <div class="row">
                 <div class="col text-center">
-                  <a style="margin-top: 30px;" href="{{ url('') }}" class="btn btn-danger">Kembali</a>
+                  <a style="margin-top: 30px;" href="{{ url('user/login') }}" class="btn btn-danger">Kembali</a>
                 </div>
               </div>
             </div>

@@ -125,6 +125,7 @@
                 </div>
             </nav>
 
+            
 
 <div style="font-family:'GothamRounded-Medium'; margin-bottom: 30px;"  class="table-responsive-sm">
     <table style="width: 30%; font-size: 13pt;">
@@ -149,6 +150,10 @@
   </tbody>
 </table>
 </div>
+
+            <div style="margin-left: 0px; margin-top: 30px; width: 60%; font-family:'GothamRounded-Medium';">
+              <p><?php echo $this->flashSession->output() ?></p>
+            </div>
 
 
                 <div class="row" style="font-family:'GothamRounded-Medium';">
