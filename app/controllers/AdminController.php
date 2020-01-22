@@ -16,6 +16,13 @@ class AdminController extends Controller
         //     // die();
         // (new Response())->redirect('user/login')->send();          
         // }
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        // $_isUser = $this->session->get('user')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
+
     }
 
     public function storeregisterAction(){
@@ -50,6 +57,12 @@ class AdminController extends Controller
 
     public function berkasAction($id)
     {
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
+
         $data = obl::findFirst("id='$id'");
         $this->view->data = $data;
 
@@ -164,7 +177,11 @@ class AdminController extends Controller
 
     public function dataAction()
     {
-
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
     }
 
     public function berkasp0Action()
@@ -1131,6 +1148,13 @@ class AdminController extends Controller
 
     public function editAction($id)
     {
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        // $_isUser = $this->session->get('user')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
+
         $data = obl::findFirst("id='$id'");
         $this->view->data = $data;
     }
@@ -1156,6 +1180,12 @@ class AdminController extends Controller
 
     public function detailAction($id)
     {
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
+
         $data = obl::findFirst("id='$id'");
         $this->view->data = $data;
 
@@ -1270,7 +1300,11 @@ class AdminController extends Controller
 
     public function formAction()
     {
-
+        $_isAdmin = $this->session->get('admin')['tipe'];
+        if (!$_isAdmin) 
+        {
+            $this->response->redirect('user/login');
+        }
     }
 
     public function storedataAction()

@@ -123,29 +123,29 @@ class UserController extends Controller{
 
     public function loginAction()
     {
-    	// $_isAdmin = $this->session->get('admin')['tipe'];
-     //    $_isUser = $this->session->get('user')['tipe'];
-     //    if ($_isAdmin == 1) {
-     //        $this->response->redirect('admin/data');
-     //    }
-     //    if($_isUser)
-     //    {
-     //        $this->response->redirect('');
-     //    }
+    	$_isAdmin = $this->session->get('admin')['tipe'];
+        $_isUser = $this->session->get('user')['tipe'];
+        if ($_isAdmin == 1) {
+            $this->response->redirect('admin/data');
+        }
+        if($_isUser)
+        {
+            $this->response->redirect('');
+        }
 
 	}
 	
 	public function registerAction()
     {
-    	// $_isAdmin = $this->session->get('admin')['tipe'];
-     //    $_isUser = $this->session->get('user')['tipe'];
-     //    if ($_isAdmin == 1) {
-     //        $this->response->redirect('admin/data');
-     //    }
-     //    if($_isUser)
-     //    {
-     //        $this->response->redirect('');
-     //    }
+    	$_isAdmin = $this->session->get('admin')['tipe'];
+        $_isUser = $this->session->get('user')['tipe'];
+        if ($_isAdmin == 1) {
+            $this->response->redirect('admin/data');
+        }
+        if($_isUser)
+        {
+            $this->response->redirect('');
+        }
 
     }
 
@@ -158,7 +158,11 @@ class UserController extends Controller{
 
     public function datauserAction()
     {
-
+        $_isUser = $this->session->get('user');
+        if (!$_isUser)
+        {
+            $this->response->redirect('user/login');
+        }
     }
 
     public function listdatauserAction()
@@ -274,6 +278,12 @@ class UserController extends Controller{
     public function listdatauserviewAction($id)
     {
     	$this->view->data = $array;
+
+        $_isUser = $this->session->get('user');
+        if (!$_isUser)
+        {
+            $this->response->redirect('user/login');
+        }
     }
 
     public function detailuserAction($id)
@@ -388,5 +398,11 @@ class UserController extends Controller{
             ]
         ]);
         $this->view->dokumen_bast = $dokumen_bast;
+
+        $_isUser = $this->session->get('user');
+        if (!$_isUser)
+        {
+            $this->response->redirect('user/login');
+        }
     }
 }
