@@ -130,7 +130,7 @@ class UserController extends Controller{
         }
         if($_isUser)
         {
-            $this->response->redirect('user/login');
+            $this->response->redirect('user/datauser');
         }
 
 	}
@@ -144,7 +144,7 @@ class UserController extends Controller{
         }
         if($_isUser)
         {
-            $this->response->redirect('/user/login');
+            $this->response->redirect('user/datauser');
         }
 
     }
