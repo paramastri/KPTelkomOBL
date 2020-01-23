@@ -59,9 +59,9 @@
   
             <ul style="margin-left: 10px;" class="list-unstyled">
 
-                <li>
+                <!-- <li>
                     <a href="{{ url('user/register') }}">Daftar</a>
-                </li>
+                </li> -->
                 <!-- <li>
                     <a href="{{ url('detailnomor') }}">Upload Surat</a>
                 </li>
