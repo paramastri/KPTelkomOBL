@@ -161,9 +161,13 @@
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p0) %}
                             <a   href="../../admin/downloadp0/{{data.id}}" class="btn btn-primary">Download File P0</a> 
+                            <br>
+                            {{dokumen_p0.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
+                            <br>
+  
                              
                             <h6 class="card-subtitle mb-2 " style="font-weight: bold; margin-top: 30px;">Status</h6>
                             <!-- <select name="status_p0" class="form-control form-control-sm" style="width: 100%; font-size: 15pt; margin-top: 0px;" >
@@ -202,6 +206,8 @@
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p0) %}
                             <a   href="../../admin/downloadp0/{{data.id}}" class="btn btn-primary">Download File P0</a> 
+                            <br>
+                            {{dokumen_p0.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -245,6 +251,8 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p1) %}
                             <a  href="../../admin/downloadp1/{{data.id}}" class="btn btn-primary">Download File P1</a> 
+                            <br>
+                            {{dokumen_p1.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -285,6 +293,8 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p1) %}
                             <a  href="../../admin/downloadp1/{{data.id}}" class="btn btn-primary">Download File P1</a> 
+                            <br>
+                            {{dokumen_p1.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -331,6 +341,8 @@
              
                     {% if (dokumen_p6) %}
                             <a  href="../../admin/downloadp6/{{data.id}}" class="btn btn-primary">Download File P6</a> 
+                            <br>
+                            {{dokumen_p6.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -372,6 +384,8 @@
              
                     {% if (dokumen_p6) %}
                             <a  href="../../admin/downloadp6/{{data.id}}" class="btn btn-primary">Download File P6</a> 
+                            <br>
+                            {{dokumen_p6.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -421,6 +435,8 @@
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p8) %}
                             <a  href="../../admin/downloadp8/{{data.id}}" class="btn btn-primary">Download File P8</a> 
+                            <br>
+                            {{dokumen_p8.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -462,6 +478,8 @@
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                             {% if (dokumen_p8) %}
                             <a  href="../../admin/downloadp8/{{data.id}}" class="btn btn-primary">Download File P8</a> 
+                            <br>
+                            {{dokumen_p8.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -508,6 +526,8 @@
           
                    {% if (dokumen_kl) %}
                             <a  href="../../admin/downloadkl/{{data.id}}" class="btn btn-primary">Download File KL</a> 
+                            <br>
+                            {{dokumen_kl.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -552,6 +572,8 @@
           
                    {% if (dokumen_kl) %}
                             <a  href="../../admin/downloadkl/{{data.id}}" class="btn btn-primary">Download File KL</a> 
+                            <br>
+                            {{dokumen_kl.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -596,6 +618,8 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                     {% if (dokumen_bast) %}
                             <a  href="../../admin/downloadbast/{{data.id}}" class="btn btn-primary">Download File BAST Mitra</a> 
+                            <br>
+                            {{dokumen_bast.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}
@@ -636,6 +660,8 @@
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px; font-weight: bold;">Unggah Dokumen</h6>
                     {% if (dokumen_bast) %}
                             <a  href="../../admin/downloadbast/{{data.id}}" class="btn btn-primary">Download File BAST Mitra</a> 
+                            <br>
+                            {{dokumen_bast.file}}
                             {% else %}
                             File belum diunggah
                             {% endif %}

@@ -166,8 +166,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             {% if (dokumen_p0) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p0.file}}
                             {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -214,8 +222,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             {% if (dokumen_p0) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                             {% else %}
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p0.file}}
+                            {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -262,8 +278,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P0</h5>
                             {% if (dokumen_p0) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                             {% else %}
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p0.file}}
+                            {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -314,8 +338,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     {% if (dokumen_p1) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                     {% else %}
+                     <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p1.file}}
+                            {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -361,8 +393,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     {% if (dokumen_p1) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                     {% else %}
+                     <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p1.file}}
+                            {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -408,8 +448,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P1</h5>
                     {% if (dokumen_p1) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_p1.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -456,8 +504,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     {% if (dokumen_p6) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_p6.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -501,8 +557,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     {% if (dokumen_p6) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                    {% else %}
-                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                    <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p6.file}}
+                            {% else %}
+                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -546,8 +610,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">P6</h5>
                     {% if (dokumen_p6) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    {{dokumen_p6.file}}
                     {% else %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input type="hidden" name="id_obl" value="{{data.id}}">
@@ -601,8 +673,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             {% if (dokumen_p8) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p8.file}}
                             {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">
@@ -647,8 +727,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             {% if (dokumen_p8) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p8.file}}
                             {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">
@@ -693,8 +781,16 @@
                             <h5 class="card-title" style="font-size: 30pt;">P8</h5>
                             {% if (dokumen_p8) %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            {{dokumen_p8.file}}
                             {% else %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                            <br>
+                            Dokumen sekarang:
+                            <br>
+                            Belum ada
                             {% endif %}
                             <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                             <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">
@@ -743,8 +839,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     {% if (dokumen_kl) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    {{dokumen_kl.file}}
                     {% else %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">  
@@ -789,8 +893,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     {% if (dokumen_kl) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_kl.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">  
@@ -835,8 +947,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">KL</h5>
                     {% if (dokumen_kl) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_kl.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">  
@@ -882,8 +1002,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     {% if (dokumen_bast) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_bast.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
@@ -926,8 +1054,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     {% if (dokumen_bast) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     {{dokumen_bast.file}}
                      {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                     <br>
+                     Dokumen sekarang:
+                     <br>
+                     Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
@@ -970,8 +1106,16 @@
                     <h5 class="card-title" style="font-size: 30pt;">BAST Mitra</h5>
                     {% if (dokumen_bast) %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Sudah mengupload dokumen. Unggah lagi untuk mengedit</h6>
-                     {% else %}
-                            <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    {{dokumen_bast.file}}
+                    {% else %}
+                    <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Belum mengupload dokumen. Silakan unggah</h6>
+                    <br>
+                    Dokumen sekarang:
+                    <br>
+                    Belum ada
                     {% endif %}
                     <h6 class="card-subtitle mb-2 " style="margin-top: 20px;">Unggah Dokumen</h6>
                     <input style="font-size: 10pt; margin-bottom: 30px;" type="file" name="file">    
