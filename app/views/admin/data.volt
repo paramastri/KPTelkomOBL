@@ -79,7 +79,7 @@
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
-            <img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block">
+            <a href="http://haloges.com/"><img style="height: 100px; margin-top: 30px;" src="../logo.png" class="rounded mx-auto d-block"></a>
             <div class="sidebar-header">
             <h6 style="text-align: center; color: black; background-color: white; border-radius: 30px; width: 90%;">Website Status OBL</h6>
             </div>
@@ -169,9 +169,9 @@
             placeholder: "Tidak Ada Data",
             columns: [
                 {title: "No", field: "no", formatter: "rownum", width: 10},
-                {title: "Nama CC", field: "nama_cc", headerFilter:"input"},
-                {title: "Nama Mitra", field: "nama_mitra", headerFilter:"input"},
-                {title: "Nama Pekerjaan", field: "nama_pekerjaan", headerFilter:"input"},
+                {title: "CC", field: "nama_cc", headerFilter:"input"},
+                {title: "Mitra", field: "nama_mitra", headerFilter:"input"},
+                {title: "Pekerjaan", field: "nama_pekerjaan", headerFilter:"input"},
                 {title: "PIC Mitra", field: "pic_mitra", headerFilter:"input"},
                 {title: "P0", field: "p0", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
                 {title: "P1", field: "p1", align:"center", formatter:"tickCross", formatterParams:{allowEmpty:true}, editor:"select", editorParams:{"true":"✅", "false":"❌"}, headerFilter:true, headerFilterParams:{"true":"✅", "false":"❌"}},
@@ -183,7 +183,7 @@
                     title: "Edit", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Edit",
-                        urlPrefix: "{{ url('admin/berkas/') }}",
+                        urlPrefix: "{{ url('admin/edit/') }}",
                         // target: "_blank",
                     }
                 },
