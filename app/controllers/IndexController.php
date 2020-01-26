@@ -14,7 +14,7 @@ class IndexController extends Controller
         // if ($_isAdmin == 1) {
         //     $this->response->redirect('admin/list');
         // }
-        if (!$_isUser && !$_isAdmin)
+        if (!$_isAdmin)
         {
             $this->response->redirect('user/login');
         }
